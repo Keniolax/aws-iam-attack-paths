@@ -1,0 +1,16 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ReadOnlyTheOneApiThisUserOwns",
+      "Effect": "Allow",
+      "Action": [
+        "apigateway:GET"
+      ],
+      "Resource": [
+        "arn:aws:apigateway:us-west-2::/restapis/REPLACE_WITH_API_ID",
+        "arn:aws:apigateway:us-west-2::/restapis/REPLACE_WITH_API_ID/*"
+      ]
+    }
+  ]
+}

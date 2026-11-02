@@ -1,0 +1,17 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "OnlyThisAccountCanPull",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::REPLACE_WITH_ACCOUNT_ID:root"
+      },
+      "Action": [
+        "ecr:GetDownloadUrlForLayer",
+        "ecr:BatchGetImage",
+        "ecr:BatchCheckLayerAvailability"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "OnlyThisAccountMayReadTheBucket",
+      "Effect": "Deny",
+      "Principal": "*",
+      "Action": "s3:*",
+      "Resource": [
+        "arn:aws:s3:::REPLACE_WITH_BUCKET",
+        "arn:aws:s3:::REPLACE_WITH_BUCKET/*"
+      ],
+      "Condition": {
+        "StringNotEquals": {
+          "aws:PrincipalAccount": "REPLACE_WITH_ACCOUNT_ID"
+        }
+      }
+    }
+  ]
+}

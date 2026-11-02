@@ -1,0 +1,19 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "StopMakingSnapshotsOrAmisPublic",
+      "Effect": "Deny",
+      "Action": [
+        "ec2:ModifySnapshotAttribute",
+        "ec2:ModifyImageAttribute"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "ec2:Add/group": "all"
+        }
+      }
+    }
+  ]
+}

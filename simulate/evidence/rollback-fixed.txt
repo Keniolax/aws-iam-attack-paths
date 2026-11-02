@@ -1,0 +1,9 @@
+-------------------------------------------------
+|             SimulateCustomPolicy              |
++------------------------------+----------------+
+|            action            |   decision     |
++------------------------------+----------------+
+|  iam:SetDefaultPolicyVersion |  implicitDeny  |
+|  iam:ListUsers               |  allowed       |
+|  s3:ListAllMyBuckets         |  implicitDeny  |
++------------------------------+----------------+
